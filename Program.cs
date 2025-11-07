@@ -1,4 +1,4 @@
-namespace exemplo
+namespace Exemplo
 {
     internal static class Program
     {
@@ -11,7 +11,7 @@ namespace exemplo
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new X());
+            Application.Run(new Form1());
         }
     }
 }

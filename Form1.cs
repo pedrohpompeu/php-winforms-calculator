@@ -1,61 +1,56 @@
-using exemplo.Classes;
+using Exemplo.Classes;
+using System.Security.Cryptography;
 
-namespace exemplo
+namespace Exemplo
 {
-    public partial class X : Form
+    public partial class Form1 : Form
     {
-        operacoes op = new operacoes();
-        
-        public X()
+        Operacoes op;
+        public Form1()
         {
             InitializeComponent();
+            op = new Operacoes();
+
         }
 
-        public void setImput()
+        public void setInputs()
         {
-            op.SetXFromInput(Double.Parse(imputTextX.Text));
-            op.SetYFromInput(Double.Parse(inputTextY.Text));
+            op.setXFromInput(double.Parse(inputTextX.Text));
+            op.setYFromInput(double.Parse(inputTextY.Text));
+        }
+        public void printResult(double x, double y, string operacao, double result)
+        {
+            string formatoSaida = x + " " + operacao + " " + y + " = ";
+            labelOutput.Visible = true;
+            labelOutput.Text = formatoSaida;
+            labelResult.Visible = true;
+            labelResult.Text = result.ToString();
         }
 
-        public void printResult(double X, double Y, string operacao, double result)
+        public void printResultOO(double x, string operacao, double result)
         {
-            string saida = operacao;
-            string saida2 = "" + result;
-
-            labelOutPut.Visible = true;
-            labelOutPut.Text = saida;
-
-            label1.Visible = true;
-            label1.Text = saida2;
+            string formatoSaida = x + " " + operacao + " " + " = ";
+            labelOutput.Visible = true;
+            labelOutput.Text = formatoSaida;
+            labelResult.Visible = true;
+            labelResult.Text = result.ToString();
         }
 
-        public void printResultOO(double X, string operacao, double result)
+        public void cleanInputs()
         {
-            string saida = operacao;
-            string saida2 = "" + result;
 
-            labelOutPut.Visible = true;
-            labelOutPut.Text = saida;
-
-            label1.Visible = true;
-            label1.Text = saida2;
         }
 
         private void onSomaClick(object sender, EventArgs e)
         {
-            setImput();
+            setInputs();
             double result = op.soma();
-            printResult(op.getX(), op.gety(), "soma", result);
+            printResult(op.getX(), op.getY(), "+", result);
         }
 
-        private void labelOutPut_Click(object sender, EventArgs e)
+        private void labelOutput_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            setImput();
         }
 
         private void labelTitle_Click(object sender, EventArgs e)
@@ -63,73 +58,46 @@ namespace exemplo
 
         }
 
-        private void inputTextY_TextChanged(object sender, EventArgs e)
+        private void btnSub_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void imputTextX_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void soma_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            setImput();
+            setInputs();
             double result = op.sub();
-            printResult(op.getX(), op.gety(), "sub", result);
+            printResult(op.getX(), op.getY(), "-", result);
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnMult_Click(object sender, EventArgs e)
         {
-            setImput();
+            setInputs();
             double result = op.mult();
-            printResult(op.getX(), op.gety(), "mult", result);
+            printResult(op.getX(), op.getY(), "x", result);
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnDiv_Click(object sender, EventArgs e)
         {
-            setImput();
+            setInputs();
             double result = op.div();
-            printResult(op.getX(), op.gety(), "div", result);
+            printResult(op.getX(), op.getY(), "÷", result);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnDobro_Click(object sender, EventArgs e)
         {
-            setImput();
+            op.setXFromInput(double.Parse(inputTextX.Text));
             double result = op.quadrado();
-            printResultOO(op.getX(), "quadrado", result);
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            setImput();
-            double result = op.raiz();
-            printResult(op.getX(), op.gety(), "raiz", result);
+            printResultOO(op.getX(), "²", result);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            setImput();
-            double result = op.porcentagem();
-            printResult(op.getX(), op.gety(), "porcentagem", result);
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            setImput();
+            setInputs();
             double result = op.elevado();
-            printResult(op.getX(), op.gety(), "elevado", result);
+            printResult(op.getX(), op.getY(), "^", result);
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void button7_Click(object sender, EventArgs e)
         {
-
+            op.setXFromInput(double.Parse(inputTextX.Text));
+            double result = op.binary();
+            printResultOO(op.getX(), "Binary", result);
         }
     }
 }

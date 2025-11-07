@@ -4,23 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace exemplo.Classes
+namespace Exemplo.Classes
 {
-    internal class operacoes
+    internal class Operacoes
     {
         double x, y;
-        public operacoes() { 
+        public Operacoes()
+        {
             x = 0; y = 0;
         }
 
-        public void SetXFromInput (double x)
+        //Getters e Setters
+
+        public void setXFromInput(double x)
         {
             this.x = x;
-        }
-
-        public void SetYFromInput (double y)
-        {
-            this.y = y;
         }
 
         public double getX()
@@ -28,10 +26,17 @@ namespace exemplo.Classes
             return this.x;
         }
 
-        public double gety()
+        public void setYFromInput(double y)
+        {
+            this.y = y;
+        }
+
+        public double getY()
         {
             return this.y;
         }
+
+        //Operações
 
         public double soma()
         {
@@ -47,35 +52,59 @@ namespace exemplo.Classes
         {
             return this.x * this.y;
         }
-        
+
         public double div()
         {
-            return this.x / this.y;
+            if (this.y == 0)
+            {
+                return 0;
+            }
+            else
+            {
+                return this.x / this.y;
+            }
         }
 
-        public double quadrado() 
-        { 
-            return this.x * this.x;
-        }
-
-        public double porcentagem()
+        public double quadrado()
         {
-            return (this.x * this.y) / 100;
+            return (this.x * this.x);
         }
 
         public double elevado()
         {
-            return Math.Pow(this.x, this.y);
+            int cont = 0;
+            double result = this.x;
+
+            while (cont < (this.y - 1))
+            {
+                result *= this.x;
+                cont++;
+            }
+            return result;
         }
 
-        public double raiz()
+        public int binary()
         {
-            return Math.Sqrt(this.x);
-        }
-
-        public double binario()
-        {
-            return 0;
+            long value = (long)this.x;
+            if (value <= 0)
+            {
+                return 0000;
+            }
+            else
+            {
+                string resto = "";
+                while (value > 0)
+                {
+                    resto += value % 2;
+                    value = value / 2;
+                }
+                string resultBinary = "";
+                for (int i = resto.Length - 1; i >= 0; i--)
+                {
+                    resultBinary += resto[i];
+                }
+                return int.Parse(resultBinary);
+            }
         }
     }
 }
