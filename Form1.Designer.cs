@@ -51,10 +51,12 @@
             // 
             inputTextX.BackColor = SystemColors.InactiveCaption;
             inputTextX.Font = new Font("Segoe UI", 12F);
-            inputTextX.Location = new Point(100, 50);
+            inputTextX.Location = new Point(70, 30);
+            inputTextX.Margin = new Padding(2);
             inputTextX.Name = "inputTextX";
-            inputTextX.Size = new Size(187, 39);
+            inputTextX.Size = new Size(132, 29);
             inputTextX.TabIndex = 1;
+            inputTextX.TextChanged += inputTextX_TextChanged;
             // 
             // labelTitle
             // 
@@ -62,11 +64,12 @@
             labelTitle.BackColor = Color.Transparent;
             labelTitle.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             labelTitle.ForeColor = Color.FromArgb(191, 0, 255);
-            labelTitle.Location = new Point(16, -7);
-            labelTitle.MaximumSize = new Size(300, 65);
-            labelTitle.MinimumSize = new Size(300, 65);
+            labelTitle.Location = new Point(11, -4);
+            labelTitle.Margin = new Padding(2, 0, 2, 0);
+            labelTitle.MaximumSize = new Size(210, 39);
+            labelTitle.MinimumSize = new Size(210, 39);
             labelTitle.Name = "labelTitle";
-            labelTitle.Size = new Size(300, 65);
+            labelTitle.Size = new Size(210, 39);
             labelTitle.TabIndex = 0;
             labelTitle.Text = "Calculator";
             labelTitle.TextAlign = ContentAlignment.MiddleLeft;
@@ -78,12 +81,13 @@
             labelOutput.BackColor = Color.Transparent;
             labelOutput.Font = new Font("Segoe UI", 12F);
             labelOutput.ForeColor = Color.FromArgb(191, 0, 255);
-            labelOutput.Location = new Point(378, 50);
-            labelOutput.MaximumSize = new Size(400, 250);
-            labelOutput.MinimumSize = new Size(400, 350);
+            labelOutput.Location = new Point(265, 30);
+            labelOutput.Margin = new Padding(2, 0, 2, 0);
+            labelOutput.MaximumSize = new Size(280, 150);
+            labelOutput.MinimumSize = new Size(280, 210);
             labelOutput.Name = "labelOutput";
-            labelOutput.Padding = new Padding(10, 20, 20, 10);
-            labelOutput.Size = new Size(400, 350);
+            labelOutput.Padding = new Padding(7, 12, 14, 6);
+            labelOutput.Size = new Size(280, 210);
             labelOutput.TabIndex = 4;
             labelOutput.Text = "...";
             labelOutput.Visible = false;
@@ -98,12 +102,13 @@
             btnSoma.FlatAppearance.CheckedBackColor = Color.Transparent;
             btnSoma.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
             btnSoma.ForeColor = SystemColors.ButtonFace;
-            btnSoma.Location = new Point(16, 232);
-            btnSoma.MaximumSize = new Size(95, 60);
-            btnSoma.MinimumSize = new Size(95, 60);
+            btnSoma.Location = new Point(11, 139);
+            btnSoma.Margin = new Padding(2);
+            btnSoma.MaximumSize = new Size(66, 36);
+            btnSoma.MinimumSize = new Size(66, 36);
             btnSoma.Name = "btnSoma";
-            btnSoma.Padding = new Padding(5);
-            btnSoma.Size = new Size(95, 60);
+            btnSoma.Padding = new Padding(4, 3, 4, 3);
+            btnSoma.Size = new Size(66, 36);
             btnSoma.TabIndex = 3;
             btnSoma.Text = "+";
             btnSoma.UseVisualStyleBackColor = false;
@@ -113,10 +118,12 @@
             // 
             inputTextY.BackColor = SystemColors.InactiveCaption;
             inputTextY.Font = new Font("Segoe UI", 12F);
-            inputTextY.Location = new Point(100, 108);
+            inputTextY.Location = new Point(70, 65);
+            inputTextY.Margin = new Padding(2);
             inputTextY.Name = "inputTextY";
-            inputTextY.Size = new Size(187, 39);
+            inputTextY.Size = new Size(132, 29);
             inputTextY.TabIndex = 2;
+            inputTextY.TextChanged += inputTextY_TextChanged;
             // 
             // labelX
             // 
@@ -124,11 +131,12 @@
             labelX.BackColor = Color.Transparent;
             labelX.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             labelX.ForeColor = Color.FromArgb(191, 0, 255);
-            labelX.Location = new Point(29, 37);
-            labelX.MaximumSize = new Size(65, 65);
-            labelX.MinimumSize = new Size(65, 65);
+            labelX.Location = new Point(20, 22);
+            labelX.Margin = new Padding(2, 0, 2, 0);
+            labelX.MaximumSize = new Size(46, 39);
+            labelX.MinimumSize = new Size(46, 39);
             labelX.Name = "labelX";
-            labelX.Size = new Size(65, 65);
+            labelX.Size = new Size(46, 39);
             labelX.TabIndex = 5;
             labelX.Text = "X";
             labelX.TextAlign = ContentAlignment.MiddleRight;
@@ -139,11 +147,12 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             label1.ForeColor = Color.FromArgb(191, 0, 255);
-            label1.Location = new Point(29, 95);
-            label1.MaximumSize = new Size(65, 65);
-            label1.MinimumSize = new Size(65, 65);
+            label1.Location = new Point(20, 57);
+            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.MaximumSize = new Size(46, 39);
+            label1.MinimumSize = new Size(46, 39);
             label1.Name = "label1";
-            label1.Size = new Size(65, 65);
+            label1.Size = new Size(46, 39);
             label1.TabIndex = 6;
             label1.Text = "Y";
             label1.TextAlign = ContentAlignment.MiddleRight;
@@ -157,12 +166,13 @@
             btnSub.FlatAppearance.CheckedBackColor = Color.Transparent;
             btnSub.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
             btnSub.ForeColor = SystemColors.ButtonFace;
-            btnSub.Location = new Point(136, 232);
-            btnSub.MaximumSize = new Size(95, 60);
-            btnSub.MinimumSize = new Size(95, 60);
+            btnSub.Location = new Point(95, 139);
+            btnSub.Margin = new Padding(2);
+            btnSub.MaximumSize = new Size(66, 36);
+            btnSub.MinimumSize = new Size(66, 36);
             btnSub.Name = "btnSub";
-            btnSub.Padding = new Padding(5);
-            btnSub.Size = new Size(95, 60);
+            btnSub.Padding = new Padding(4, 3, 4, 3);
+            btnSub.Size = new Size(66, 36);
             btnSub.TabIndex = 7;
             btnSub.Text = "—";
             btnSub.UseVisualStyleBackColor = false;
@@ -177,12 +187,13 @@
             btnMult.FlatAppearance.CheckedBackColor = Color.Transparent;
             btnMult.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
             btnMult.ForeColor = SystemColors.ButtonFace;
-            btnMult.Location = new Point(258, 232);
-            btnMult.MaximumSize = new Size(95, 60);
-            btnMult.MinimumSize = new Size(95, 60);
+            btnMult.Location = new Point(181, 139);
+            btnMult.Margin = new Padding(2);
+            btnMult.MaximumSize = new Size(66, 36);
+            btnMult.MinimumSize = new Size(66, 36);
             btnMult.Name = "btnMult";
-            btnMult.Padding = new Padding(5);
-            btnMult.Size = new Size(95, 60);
+            btnMult.Padding = new Padding(4, 3, 4, 3);
+            btnMult.Size = new Size(66, 36);
             btnMult.TabIndex = 8;
             btnMult.Text = "X";
             btnMult.UseVisualStyleBackColor = false;
@@ -197,15 +208,17 @@
             btnRaiz.FlatAppearance.CheckedBackColor = Color.Transparent;
             btnRaiz.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
             btnRaiz.ForeColor = SystemColors.ButtonFace;
-            btnRaiz.Location = new Point(258, 306);
-            btnRaiz.MaximumSize = new Size(95, 60);
-            btnRaiz.MinimumSize = new Size(95, 60);
+            btnRaiz.Location = new Point(181, 184);
+            btnRaiz.Margin = new Padding(2);
+            btnRaiz.MaximumSize = new Size(66, 36);
+            btnRaiz.MinimumSize = new Size(66, 36);
             btnRaiz.Name = "btnRaiz";
-            btnRaiz.Padding = new Padding(5);
-            btnRaiz.Size = new Size(95, 60);
+            btnRaiz.Padding = new Padding(4, 3, 4, 3);
+            btnRaiz.Size = new Size(66, 36);
             btnRaiz.TabIndex = 11;
             btnRaiz.Text = "√ ";
             btnRaiz.UseVisualStyleBackColor = false;
+            btnRaiz.Click += btnRaiz_Click;
             // 
             // btnDobro
             // 
@@ -216,12 +229,13 @@
             btnDobro.FlatAppearance.CheckedBackColor = Color.Transparent;
             btnDobro.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
             btnDobro.ForeColor = SystemColors.ButtonFace;
-            btnDobro.Location = new Point(136, 306);
-            btnDobro.MaximumSize = new Size(95, 60);
-            btnDobro.MinimumSize = new Size(95, 60);
+            btnDobro.Location = new Point(95, 184);
+            btnDobro.Margin = new Padding(2);
+            btnDobro.MaximumSize = new Size(66, 36);
+            btnDobro.MinimumSize = new Size(66, 36);
             btnDobro.Name = "btnDobro";
-            btnDobro.Padding = new Padding(5);
-            btnDobro.Size = new Size(95, 60);
+            btnDobro.Padding = new Padding(4, 3, 4, 3);
+            btnDobro.Size = new Size(66, 36);
             btnDobro.TabIndex = 10;
             btnDobro.Text = "X²";
             btnDobro.UseVisualStyleBackColor = false;
@@ -236,12 +250,13 @@
             btnDiv.FlatAppearance.CheckedBackColor = Color.Transparent;
             btnDiv.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
             btnDiv.ForeColor = SystemColors.ButtonFace;
-            btnDiv.Location = new Point(16, 306);
-            btnDiv.MaximumSize = new Size(95, 60);
-            btnDiv.MinimumSize = new Size(95, 60);
+            btnDiv.Location = new Point(11, 184);
+            btnDiv.Margin = new Padding(2);
+            btnDiv.MaximumSize = new Size(66, 36);
+            btnDiv.MinimumSize = new Size(66, 36);
             btnDiv.Name = "btnDiv";
-            btnDiv.Padding = new Padding(5);
-            btnDiv.Size = new Size(95, 60);
+            btnDiv.Padding = new Padding(4, 3, 4, 3);
+            btnDiv.Size = new Size(66, 36);
             btnDiv.TabIndex = 9;
             btnDiv.Text = "÷";
             btnDiv.UseVisualStyleBackColor = false;
@@ -256,12 +271,13 @@
             button6.FlatAppearance.CheckedBackColor = Color.Transparent;
             button6.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
             button6.ForeColor = SystemColors.ButtonFace;
-            button6.Location = new Point(258, 377);
-            button6.MaximumSize = new Size(95, 60);
-            button6.MinimumSize = new Size(95, 60);
+            button6.Location = new Point(181, 226);
+            button6.Margin = new Padding(2);
+            button6.MaximumSize = new Size(66, 36);
+            button6.MinimumSize = new Size(66, 36);
             button6.Name = "button6";
-            button6.Padding = new Padding(5);
-            button6.Size = new Size(95, 60);
+            button6.Padding = new Padding(4, 3, 4, 3);
+            button6.Size = new Size(66, 36);
             button6.TabIndex = 14;
             button6.Text = "X^y";
             button6.UseVisualStyleBackColor = false;
@@ -276,12 +292,13 @@
             button7.FlatAppearance.CheckedBackColor = Color.Transparent;
             button7.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             button7.ForeColor = SystemColors.ButtonFace;
-            button7.Location = new Point(136, 377);
-            button7.MaximumSize = new Size(95, 60);
-            button7.MinimumSize = new Size(95, 60);
+            button7.Location = new Point(95, 226);
+            button7.Margin = new Padding(2);
+            button7.MaximumSize = new Size(66, 36);
+            button7.MinimumSize = new Size(66, 36);
             button7.Name = "button7";
-            button7.Padding = new Padding(5);
-            button7.Size = new Size(95, 60);
+            button7.Padding = new Padding(4, 3, 4, 3);
+            button7.Size = new Size(66, 36);
             button7.TabIndex = 13;
             button7.Text = "01010";
             button7.UseVisualStyleBackColor = false;
@@ -296,15 +313,17 @@
             btnPorcent.FlatAppearance.CheckedBackColor = Color.Transparent;
             btnPorcent.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
             btnPorcent.ForeColor = SystemColors.ButtonFace;
-            btnPorcent.Location = new Point(16, 377);
-            btnPorcent.MaximumSize = new Size(95, 60);
-            btnPorcent.MinimumSize = new Size(95, 60);
+            btnPorcent.Location = new Point(11, 226);
+            btnPorcent.Margin = new Padding(2);
+            btnPorcent.MaximumSize = new Size(66, 36);
+            btnPorcent.MinimumSize = new Size(66, 36);
             btnPorcent.Name = "btnPorcent";
-            btnPorcent.Padding = new Padding(5);
-            btnPorcent.Size = new Size(95, 60);
+            btnPorcent.Padding = new Padding(4, 3, 4, 3);
+            btnPorcent.Size = new Size(66, 36);
             btnPorcent.TabIndex = 12;
             btnPorcent.Text = "%";
             btnPorcent.UseVisualStyleBackColor = false;
+            btnPorcent.Click += btnPorcent_Click;
             // 
             // labelResult
             // 
@@ -312,12 +331,12 @@
             labelResult.BackColor = Color.Transparent;
             labelResult.Font = new Font("Segoe UI", 35F, FontStyle.Bold);
             labelResult.ForeColor = Color.FromArgb(191, 0, 255);
-            labelResult.Location = new Point(378, 142);
-            labelResult.Margin = new Padding(2);
-            labelResult.MaximumSize = new Size(400, 200);
-            labelResult.MinimumSize = new Size(400, 200);
+            labelResult.Location = new Point(265, 85);
+            labelResult.Margin = new Padding(1);
+            labelResult.MaximumSize = new Size(280, 120);
+            labelResult.MinimumSize = new Size(280, 120);
             labelResult.Name = "labelResult";
-            labelResult.Size = new Size(400, 200);
+            labelResult.Size = new Size(280, 120);
             labelResult.TabIndex = 15;
             labelResult.Text = "000000";
             labelResult.TextAlign = ContentAlignment.MiddleCenter;
@@ -332,23 +351,25 @@
             button1.FlatAppearance.CheckedBackColor = Color.Transparent;
             button1.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
             button1.ForeColor = SystemColors.ButtonFace;
-            button1.Location = new Point(258, 162);
-            button1.MaximumSize = new Size(95, 55);
-            button1.MinimumSize = new Size(95, 55);
+            button1.Location = new Point(181, 97);
+            button1.Margin = new Padding(2);
+            button1.MaximumSize = new Size(66, 33);
+            button1.MinimumSize = new Size(66, 33);
             button1.Name = "button1";
-            button1.Padding = new Padding(5);
-            button1.Size = new Size(95, 55);
+            button1.Padding = new Padding(4, 3, 4, 3);
+            button1.Size = new Size(66, 33);
             button1.TabIndex = 16;
             button1.Text = "AC";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(28, 28, 28);
             BackgroundImageLayout = ImageLayout.None;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(560, 270);
             Controls.Add(button1);
             Controls.Add(inputTextX);
             Controls.Add(labelResult);
@@ -367,6 +388,7 @@
             Controls.Add(labelOutput);
             Controls.Add(labelTitle);
             FormBorderStyle = FormBorderStyle.SizableToolWindow;
+            Margin = new Padding(2);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";

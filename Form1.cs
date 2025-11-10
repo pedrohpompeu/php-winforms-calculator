@@ -1,4 +1,5 @@
 using Exemplo.Classes;
+using System.Reflection.Metadata.Ecma335;
 using System.Security.Cryptography;
 
 namespace Exemplo
@@ -34,11 +35,6 @@ namespace Exemplo
             labelOutput.Text = formatoSaida;
             labelResult.Visible = true;
             labelResult.Text = result.ToString();
-        }
-
-        public void cleanInputs()
-        {
-
         }
 
         private void onSomaClick(object sender, EventArgs e)
@@ -98,6 +94,40 @@ namespace Exemplo
             op.setXFromInput(double.Parse(inputTextX.Text));
             double result = op.binary();
             printResultOO(op.getX(), "Binary", result);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string formatoSaida = op.apagar();
+            labelOutput.Visible = false;
+            labelOutput.Text = formatoSaida;
+            labelResult.Visible = false;
+            inputTextX.Text = "";
+            inputTextY.Text = "";
+        }
+
+        private void inputTextX_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inputTextY_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRaiz_Click(object sender, EventArgs e)
+        {
+            op.setXFromInput(double.Parse(inputTextX.Text));
+            double result = op.raiz();
+            printResultOO(op.getX(), "raiz", result);
+        }
+
+        private void btnPorcent_Click(object sender, EventArgs e)
+        {
+            setInputs();
+            double result = op.porcentagem();
+            printResult(op.getX(), op.getY(), "%", result);
         }
     }
 }

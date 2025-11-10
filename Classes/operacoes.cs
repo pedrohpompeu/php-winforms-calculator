@@ -106,5 +106,20 @@ namespace Exemplo.Classes
                 return int.Parse(resultBinary);
             }
         }
+
+        public double raiz()
+        {
+            return Math.Sqrt(this.x);
+        }
+
+        public double porcentagem()
+        {
+            return (this.x / 100) * this.y;
+        }
+
+        public string apagar()
+        {
+            return "";
+        }
     }
 }
