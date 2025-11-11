@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Authors>Pedro Pompeu</Authors>
+    <PackageIcon>WhatsApp Image 2025-11-11 at 18.44.04.jpeg</PackageIcon>
+    <ApplicationIcon>WhatsApp-Image-2025-11-11-at-18.44.04.ico</ApplicationIcon>
+    <Description>Esse é um simples projeto, feito em Forms com C#, de uma calculadora de operações básicas e de conversão para Binário.</Description>
+    <RepositoryUrl>https://github.com/pedrohpompeu/php-winforms-calculator</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <SignAssembly>False</SignAssembly>
+    <Company>Pompeu Apps</Company>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="WhatsApp-Image-2025-11-11-at-18.44.04.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\Downloads\WhatsApp Image 2025-11-11 at 18.44.04.jpeg">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

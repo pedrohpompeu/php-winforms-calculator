@@ -329,7 +329,7 @@
             // 
             labelResult.AutoSize = true;
             labelResult.BackColor = Color.Transparent;
-            labelResult.Font = new Font("Segoe UI", 35F, FontStyle.Bold);
+            labelResult.Font = new Font("Segoe UI", 30F, FontStyle.Bold);
             labelResult.ForeColor = Color.FromArgb(191, 0, 255);
             labelResult.Location = new Point(265, 85);
             labelResult.Margin = new Padding(1);
@@ -391,7 +391,7 @@
             Margin = new Padding(2);
             Name = "Operon";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
+            Text = "Operon";
             Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
