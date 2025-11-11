@@ -4,10 +4,10 @@ using System.Security.Cryptography;
 
 namespace Exemplo
 {
-    public partial class Form1 : Form
+    public partial class Operon : Form
     {
         Operacoes op;
-        public Form1()
+        public Operon()
         {
             InitializeComponent();
             op = new Operacoes();
@@ -128,6 +128,11 @@ namespace Exemplo
             setInputs();
             double result = op.porcentagem();
             printResult(op.getX(), op.getY(), "%", result);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

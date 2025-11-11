@@ -1,6 +1,6 @@
 ﻿namespace Exemplo
 {
-    partial class Form1
+    partial class Operon
     {
         /// <summary>
         ///  Required designer variable.
@@ -363,7 +363,7 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
-            // Form1
+            // Operon
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -389,9 +389,10 @@
             Controls.Add(labelTitle);
             FormBorderStyle = FormBorderStyle.SizableToolWindow;
             Margin = new Padding(2);
-            Name = "Form1";
+            Name = "Operon";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
